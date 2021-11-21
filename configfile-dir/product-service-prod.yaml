@@ -1,0 +1,72 @@
+spring:
+  application:
+    name: product-service
+  cloud:
+    #应用配置中心配置
+    config:
+      profile: "prod"
+      label: "product"
+server:
+  port: 7070
+#  zipkin:
+#    base-url: http://localhost:9411/ # 服务端地址
+#    sender:
+#      type: web                      # 数据传输方式，web 表示以 HTTP 报文的形式向服务端发送数据
+#    sleuth:
+#      sampler:
+#        probability: 1.0               # 收集数据百分比，默认 0.1（10%）
+
+#开启链路
+tracing:
+  jaeger:
+    logSpans: true
+#opentracing配置
+opentracing:
+  spring:
+    cloud:
+      jms:
+        enabled: false
+      mongo:
+        enabled: false
+      redis:
+        enabled: false
+      rxjava:
+        enabled: fales
+      zuul:
+        enabled: false
+# 度量指标监控与健康检查
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    info:
+      enabled: true
+    health:
+      show-details: always
+    metrics:
+      enabled: true
+    hystrix:
+      stream:
+        enabled: true
+  metrics:
+    tags:
+      application: ${SERVICE_NAME}
+    export:
+      prometheus:
+        enabled: true
+    enable:
+      system: false
+    web:
+      server:
+        auto-time-requests: true
+    distribution:
+      percentiles-histogram:
+        http:
+          server:
+            requests: true
+      sla:
+        http:
+          server:
+            requests: 50ms,100ms,250ms,500ms,800ms,1000ms,2500ms,5000ms
