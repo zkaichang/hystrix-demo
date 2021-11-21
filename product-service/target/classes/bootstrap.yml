@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: product-service
+  cloud:
+    config:
+      name: product-service
+      uri: ${CONFIG_URL:http://localhost:8888}  # 定义变量：CONFIG_URL 并给定初始值；CloudOS云平台在创建微服务引擎以赋值CONFIG_URL变量。
+      profile: prod  #环境，指的是：xxx-dev.yml 文件名中的dev
+      label: product #git分支
+#server:
+#  port: 7070
+# 配置 Eureka Server 注册中心
+eureka:
+  instance:
+    prefer-ip-address: true       # 是否使用 ip 地址注册
+    instance-id: ${spring.cloud.client.ip-address}:${server.port} # ip:port
+  client:
+    service-url:       # 设置服务注册中心地址,定义变量：EUREKA_URL 并给定初始值；CloudOS云平台在创建微服务引擎以赋值EUREKA_URL变量.
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/,http://localhost:8762/eureka/}

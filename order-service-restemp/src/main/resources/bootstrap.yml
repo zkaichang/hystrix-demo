@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: order-service-res
+  cloud:
+    config:
+      name: order-service-res
+      uri: ${CONFIG_URL:http://localhost:8888}
+      profile: prod  #环境，指的是：xxx-dev.yml 文件名中的dev
+      label: orderres #git分支
+#server:
+#  port: 9090
+# 配置 Eureka Server 注册中心
+eureka:
+  instance:
+    prefer-ip-address: true       # 否使用 ip 地址注册
+    instance-id: ${spring.cloud.client.ip-address}:${server.port} # ip:port
+  client:
+    service-url:                  # 设置服务注册中心地址
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/,http://localhost:8762/eureka/}

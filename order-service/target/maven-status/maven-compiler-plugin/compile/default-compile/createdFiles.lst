@@ -1,0 +1,10 @@
+com\example\fallback\ProductServiceFallbackFactory$1.class
+com\example\controller\OrderController.class
+com\example\service\ProductService.class
+com\example\pojo\Order.class
+com\example\OrderServiceFeignApplication.class
+com\example\service\OrderService.class
+com\example\service\impl\OrderServiceImpl.class
+com\example\pojo\Product.class
+com\example\fallback\ProductServiceFallback.class
+com\example\fallback\ProductServiceFallbackFactory.class

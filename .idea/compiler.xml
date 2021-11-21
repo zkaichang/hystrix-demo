@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="hystrix-turbine" />
+        <module name="config-server" />
+        <module name="order-service-restemp" />
+        <module name="product-service" />
+        <module name="eureka-server02" />
+        <module name="order-service" />
+        <module name="eureka-server" />
+        <module name="gateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="config-client-server" target="1.8" />
+      <module name="config-server" target="1.8" />
+      <module name="eureka-server" target="1.8" />
+      <module name="eureka-server02" target="1.8" />
+      <module name="gateway" target="1.8" />
+      <module name="hystrix-demo" target="1.8" />
+      <module name="hystrix-turbine" target="1.8" />
+      <module name="order-service" target="1.8" />
+      <module name="order-service-consumer-feign" target="1.8" />
+      <module name="order-service-rest" target="1.8" />
+      <module name="order-service-restemp" target="1.8" />
+      <module name="order-service-restemplate" target="1.7" />
+      <module name="product-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="config-client-server" options="-parameters" />
+      <module name="config-server" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="eureka-server02" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="hystrix-turbine" options="-parameters" />
+      <module name="order-service" options="-parameters" />
+      <module name="order-service-consumer-feign" options="-parameters" />
+      <module name="order-service-rest" options="" />
+      <module name="order-service-restemp" options="-parameters" />
+      <module name="order-service-restemplate" options="" />
+      <module name="product-service" options="-parameters" />
+    </option>
+  </component>
+</project>

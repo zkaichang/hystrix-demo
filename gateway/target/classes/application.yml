@@ -1,0 +1,34 @@
+server:
+  port: 9000 # 端口
+
+spring:
+  application:
+    name: gateway-server # 应用名称
+  zipkin:
+    base-url: http://localhost:9411/ # 服务端地址
+    sender:
+      type: web                      # 数据传输方式，web 表示以 HTTP 报文的形式向服务端发送数据
+    sleuth:
+      sampler:
+        probability: 1.0               # 收集数据百分比，默认 0.1（10%）
+  cloud:
+    gateway:
+      # 路由规则
+      routes:
+        - id: order-service           # 路由 ID，唯一
+          uri: lb://order-service     # lb:// 根据服务名称从注册中心获取服务请求地址
+          predicates:                   # 断言（判断条件）
+            - Path=/order/**          # 匹配对应 URL 的请求，将匹配到的请求追加在目标 URI 之后
+        - id: order-service-restemp
+          uri: lb://order-service-restemp
+          predicates:
+            - Path=/orderres/**
+
+# 配置 Eureka Server 注册中心
+eureka:
+  instance:
+    prefer-ip-address: true       # 是否使用 ip 地址注册
+    instance-id: ${spring.cloud.client.ip-address}:${server.port} # ip:port
+  client:
+    service-url:                  # 设置服务注册中心地址
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/

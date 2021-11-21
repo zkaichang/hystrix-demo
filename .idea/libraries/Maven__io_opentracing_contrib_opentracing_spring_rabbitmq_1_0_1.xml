@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: io.opentracing.contrib:opentracing-spring-rabbitmq:1.0.1">
+    <CLASSES>
+      <root url="jar://D:/reponsitory_boot/io/opentracing/contrib/opentracing-spring-rabbitmq/1.0.1/opentracing-spring-rabbitmq-1.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/reponsitory_boot/io/opentracing/contrib/opentracing-spring-rabbitmq/1.0.1/opentracing-spring-rabbitmq-1.0.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/reponsitory_boot/io/opentracing/contrib/opentracing-spring-rabbitmq/1.0.1/opentracing-spring-rabbitmq-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

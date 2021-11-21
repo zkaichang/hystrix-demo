@@ -1,0 +1,21 @@
+server:
+  port: 8888 # 端口
+
+spring:
+  application:
+    name: config-server # 应用名称
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://gitlab.zkchang.com/root/config-repo.git # 配置文件所在仓库地址
+          username: root            # Github 等产品的登录账号
+          password: '123!@#qwe'             # Github 等产品的登录密码
+          #default-label: master # 配置文件分支
+          #search-paths:         # 配置文件所在根目录
+management:
+  endpoints:
+    web:
+      base-path: /actuator    # 访问端点根路径，默认为 /actuator
+      exposure:
+        include: '*'

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: io.opentracing.contrib:opentracing-spring-cloud-core:0.2.6">
+    <CLASSES>
+      <root url="jar://D:/reponsitory_boot/io/opentracing/contrib/opentracing-spring-cloud-core/0.2.6/opentracing-spring-cloud-core-0.2.6.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/reponsitory_boot/io/opentracing/contrib/opentracing-spring-cloud-core/0.2.6/opentracing-spring-cloud-core-0.2.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/reponsitory_boot/io/opentracing/contrib/opentracing-spring-cloud-core/0.2.6/opentracing-spring-cloud-core-0.2.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
